@@ -77,49 +77,6 @@ Copy code
 npm start
 The server will be running at http://localhost:3000.
 
-
-
-Usage
-Example Requests
-1. Sign Up a New User
-bash
-Copy code
-POST /signup
-{
-  "aadharNumber": "123456789012",
-  "password": "securepassword"
-}
-2. Log In
-bash
-Copy code
-POST /login
-{
-  "aadharNumber": "123456789012",
-  "password": "securepassword"
-}
-3. Vote for a Candidate
-bash
-Copy code
-POST /vote/5f8f8c44b54764421b7156c6
-Headers: Authorization: Bearer <JWT Token>
-4. Get Vote Counts
-bash
-Copy code
-GET /vote/counts
-Project Structure
-bash
-Copy code
-VillageElect/
-│
-├── controllers/          # Functions handling the API logic
-├── models/               # Mongoose schemas for Users, Candidates
-├── routes/               # API endpoints
-├── middleware/           # JWT authentication middleware
-├── config/               # Database and environment configurations
-├── .env                  # Environment variables
-├── server.js             # Entry point for the Node.js application
-└── README.md             # Project documentation
-Contributing
 Fork the repository.
 Create your feature branch (git checkout -b feature/new-feature).
 Commit your changes (git commit -am 'Add a new feature').
